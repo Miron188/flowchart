@@ -1,0 +1,12 @@
+.result {
+    padding: 10px;
+    background-color: gainsboro;
+    margin: 4px;
+    font-size: 15px;
+    min-height: 17px;
+}
+
+.result-tilte {
+    font-size: 20px;
+    padding-left: 5px;
+}

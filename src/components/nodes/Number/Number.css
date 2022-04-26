@@ -1,0 +1,18 @@
+.number-node {
+    height: 20px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    width: 40px;
+  }
+  
+  .number-node label {
+    display: block;
+    color: #777;
+    font-size: 12px;
+  }
+  
+  .number-node input {
+    width: 33.3px
+  }
