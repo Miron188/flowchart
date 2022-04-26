@@ -32,7 +32,7 @@ export function calculate(str) {
     exp= exp.replace(match_sum_diff, sum_or_diff);
     return exp;
     };
-    while(str.indexOf("(") !== -1) // убираем скобки
+    while(str.indexOf("(") !== -1)
     str=str.replace(/\(([^\(\)]*)\)/g, get_value);
 
     return get_value("", str);
