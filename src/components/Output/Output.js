@@ -1,11 +1,11 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import calculateResult from '../../utils/calculate';
 import createTree from '../../utils/tree';
 import { beautifyObject } from '../../utils/utils'
 import Result from '../Result/Result';
 import Json from '../Json/Json';
 
-export default function Output({edges, nodes}) {
+function Output({edges, nodes}) {
     const [ json, setJson ] = useState()
     const [ result, setResult ] = useState('');
 
@@ -14,7 +14,7 @@ export default function Output({edges, nodes}) {
     }, [nodes, edges])
     
     function createOutput() {
-        if(!nodes.length || !edges.length) {
+        if(nodes.length || edges.length) {
             setJson();
             setResult('')
         }
@@ -35,3 +35,5 @@ export default function Output({edges, nodes}) {
     </aside>
   );
 };
+
+export default React.memo(Output)
