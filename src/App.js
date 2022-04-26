@@ -31,6 +31,11 @@ const DnDFlow = () => {
     event.dataTransfer.dropEffect = 'move';
   }, []);
 
+  const handleClearAll = () => {
+    setNodes([]);
+    setEdges([])
+  }
+
   const setValueIntoNumberNode = (event, id) => {
     setNodes((nds) =>
       nds.map((node) => {
@@ -115,10 +120,7 @@ const DnDFlow = () => {
     <div className="dndflow">
       <ReactFlowProvider>
       <Sidebar child={
-        <button onClick={() => {
-          setNodes([]);
-          setEdges([])
-        }}>Clear all</button>
+        <button onClick={handleClearAll}>Clear all</button>
       }/>
       
         <div className="reactflow-wrapper" ref={reactFlowWrapper}>
