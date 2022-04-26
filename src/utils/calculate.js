@@ -2,7 +2,7 @@
 export default function calculateResult(tree) {
     try {
         checkIsCorrectTree(tree);
-        return inOrder(tree);
+        return postOrder(tree);
     } catch(e) {
         // console.error('Wrong tree')
     }
@@ -52,10 +52,10 @@ export function calculate(str) {
      
     }
 
-    function inOrder(node){
+    function postOrder(node){
         if (node == null) return;
-            inOrder(node.left);
-            inOrder(node.right);   
+            postOrder(node.left);
+            postOrder(node.right);   
             if (node.type === 'operator') {
                 const sum = calculate(`${node.left?.sum || node.left.value} ${node.value} ${node.right?.sum || node.right.value}`)
                 node.sum = sum
