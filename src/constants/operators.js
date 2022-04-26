@@ -1,8 +1,8 @@
 const OPERATORS = {
-    'multiply'  : '*',
-    'increment' : '+',
-    'decrement' : '-',
-    'divide'    : '/'
-}
+    "multiply"  : "*",
+    "increment" : "+",
+    "decrement" : "-",
+    "divide"    : "/"
+};
 
 export default OPERATORS;

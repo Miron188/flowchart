@@ -1,17 +1,22 @@
-import { Handle, Position } from 'react-flow-renderer';
-import './Number.css'
+/* eslint-disable react/jsx-no-bind */
+import { Handle, Position } from "react-flow-renderer";
+import "./Number.css";
+import React from "react";
 
-function Number({data, id}) {
-  const onChange = (evt) => {
-    data.onChange(evt, id)
-  };
+function Number({ data, id }) {
+    const onChange = (evt) => {
+        data.onChange(evt, id);
+    };
 
-  return (
-    <div className="number-node">
-        <input id="text" name="text" onChange={onChange} pattern="[0-9]*"/>
-        <Handle type="source" position={Position.Bottom} id="a"/>
-    </div>
-  );
+    return (
+        <div className='number-node'>
+            <input
+                id='text' name='text' onChange={onChange}
+                pattern='[0-9]*'
+            />
+            <Handle type='source' position={Position.Bottom} id='a' />
+        </div>
+    );
 }
 
 export default Number;

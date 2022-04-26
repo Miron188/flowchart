@@ -1,14 +1,13 @@
-import React from 'react';
-import "./Result.css"
+import React from "react";
+import "./Result.css";
 
-export default function Result({ value }) { 
-
+export default function Result({ value }) {
     return (
         <>
-        <span className='result-tilte'>Result: </span>
-        <div className='result'>
-            {value}
-        </div>
+            <span className='result-tilte'>Result: </span>
+            <div className='result'>
+                {value}
+            </div>
         </>
-    )
+    );
 }

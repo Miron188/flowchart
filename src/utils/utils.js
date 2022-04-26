@@ -1,15 +1,16 @@
+/* eslint-disable no-magic-numbers */
+/* eslint-disable no-param-reassign */
 export function beautifyObject(object) {
+    function clearObject(node) {
+        if (node === undefined) return;
 
-    function clearObject(node){
-        if(node == null) return;
-        
-        delete node.id
-        delete node.sum
+        delete node.id;
+        delete node.sum;
         clearObject(node.left);
         clearObject(node.right);
     }
 
     clearObject(object);
-    
-    return JSON.stringify(object, null, 3)
+
+    return JSON.stringify(object, null, 3);
 }

@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react";
 
-export default function Json({ json }) { 
-    return <pre>{json}</pre>
+export default function Json({ json }) {
+    return <pre>{json}</pre>;
 }

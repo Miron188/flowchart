@@ -12,14 +12,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "eslint src --ext js,jsx",
+    "lint:fix": "eslint src --fix --ext js,jsx"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "webbylab"
+    ],
+    "rules": {
+      "react/prop-types": 0,
+      "func-style": ["error", "declaration", { "allowArrowFunctions": true }]
+    }
   },
   "browserslist": {
     "production": [
@@ -32,5 +37,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-react": "^7.16.7",
+    "eslint": "^7.32.0",
+    "eslint-config-webbylab": "^6.0.0",
+    "eslint-plugin-fetch": "^0.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-more": "^1.0.5",
+    "eslint-plugin-no-require-lodash": "^1.1.0",
+    "eslint-plugin-prefer-spread": "^1.0.3",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-security": "^1.5.0"
   }
 }
